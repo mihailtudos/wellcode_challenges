@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-width: 400px;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border-bottom: 1px solid gray;
+    width: 70%;
+    margin: auto;
+}
+
+.rules {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+#number {
+    width: 150px;
+    font-size: 0.8em;
+}
+
+button[type=submit] {
+    
+    padding: 5px 25px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #3CBC8D;
+    color: white;
+  }
+
+#playGround {
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.nice_button {
+    border-radius: 10px;
+    background: gray;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin: 15px;
+}
+
+.nice_button:hover {
+    background: gainsboro;
+    color: black;
+}

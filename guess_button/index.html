@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess button</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Welcome to Guess the Button!</h1>
+        </header>
+        <hr>
+        <div class="rules">
+            <h3>The rules of this game are simple:</h3>
+            <ol>
+                <li>Choose a number from 1 to 10</li>
+                <li>Guess the winning button</li>
+            </ol>
+            <form>
+                <label for="number">
+                    <input type="number" name="number" id="number" autofocus maxlength="2" min="2"  max="10" required='true'>
+                </label>
+                <button id="submitButton" type="submit" onclick="playGame()">Start game</button>
+            </form>
+            <p id="numberError"></p>
+        </div>
+        <hr>
+        <div id="playGround">
+            
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
