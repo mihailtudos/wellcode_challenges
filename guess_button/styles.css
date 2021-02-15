@@ -36,7 +36,6 @@ hr {
 }
 
 button[type=submit] {
-    
     padding: 5px 25px;
     box-sizing: border-box;
     border: none;
@@ -65,3 +64,5 @@ button[type=submit] {
     background: gainsboro;
     color: black;
 }
+
+
