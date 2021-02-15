@@ -6,6 +6,7 @@
     <title>Guess button</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -13,26 +14,64 @@
         <header>
             <h1>Welcome to Guess the Button!</h1>
         </header>
-        <hr>
         <div class="rules">
             <h3>The rules of this game are simple:</h3>
             <ol>
+                <li>Enter your name</li>
                 <li>Choose a number from 1 to 10</li>
-                <li>Guess the winning button</li>
+                <li>Guess the winning button (you have 3 atempts to find the winning button)</li>
+                <li><strong>Won?</strong> Claim the reward! <strong>Lost?</strong> Have another go!</li>
             </ol>
-            <form>
-                <label for="number">
-                    <input type="number" name="number" id="number" autofocus maxlength="2" min="2"  max="10" required='true'>
-                </label>
-                <button id="submitButton" type="submit" onclick="playGame()">Start game</button>
-            </form>
-            <p id="numberError"></p>
         </div>
         <hr>
+       
+        <div class="setup">
+            <form>
+                <div class="input-field">
+                    <label for="playerName"> Enter your name: </label>
+                    <input type="text" name="playerName" id="playerName" autofocus>
+                </div>
+                <div class="input-field">
+                    <label for="number"> Enter a number: </label>
+                    <input type="number" name="number" id="number"  maxlength="2" min="2"  max="10" required='true'>
+                </div>
+               <div class="control-buttons">
+                <button id="submitButton" type="submit" onclick="playGame()">Start game</button>
+                <button id="restartButton" type="reset" onclick="location.reload()">Restart game</button>
+               </div>
+            </form>
+            <div class="feedback">
+                <p id="numberError"></p>
+            </div>
+        </div>
+        <hr>
+        <div class="gameDetails">
+            <div>
+                <p id="choiceFeedback"></p>
+            </div>
+            <div id="gamePlayerDetails">
+                <p id="player"></p>
+                <ul>
+                    <li><i class="fas fa-heart"></i></li>
+                    <li><i class="fas fa-heart"></i></li>
+                    <li><i class="fas fa-heart"></i></li>
+                </ul>
+            </div>
+        </div>
         <div id="playGround">
             
         </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modalMessage"></p>
+                <button id="restartButton" type="reset" onclick="location.reload()">Restart game</button>
+            </div>
+        </div>
     </div>
+    
     <script src="./app.js"></script>
 </body>
 </html>
